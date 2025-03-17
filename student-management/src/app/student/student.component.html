@@ -1,0 +1,59 @@
+<h1>Student Registration</h1>
+<div class="form-container">
+  <form (ngSubmit)="onSubmit()" #studentForm="ngForm">
+    <label>First Name:</label>
+    <input type="text" [(ngModel)]="student.firstName" name="firstName" required>
+
+    <label>Last Name:</label>
+    <input type="text" [(ngModel)]="student.lastName" name="lastName" required>
+
+    <label>Age:</label>
+    <input type="number" [(ngModel)]="student.age" name="age" required>
+
+    <label>Blood Group:</label>
+    <input type="text" [(ngModel)]="student.bloodGroup" name="bloodGroup" required>
+
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="student.email" name="email" required>
+
+    <label>Phone Number:</label>
+    <input type="text" [(ngModel)]="student.phoneNumber" name="phoneNumber" required>
+
+    <div class="button-container">
+      <button type="submit">{{ isEditMode ? 'Update' : 'Submit' }}</button>
+      <button type="button" (click)="resetForm()" *ngIf="isEditMode">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<h2>Student List</h2>
+<table class="student-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Age</th>
+      <th>Blood Group</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.id }}</td>
+      <td>{{ student.firstName }}</td>
+      <td>{{ student.lastName }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.bloodGroup }}</td>
+      <td>{{ student.email }}</td>
+      <td>{{ student.phoneNumber }}</td>
+      <td>
+        <button  (click)="editStudent(student)">Update</button>
+        <button  class="btn" (click)="deleteStudent(student.id!)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
