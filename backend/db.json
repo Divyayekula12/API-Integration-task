@@ -1,0 +1,22 @@
+{
+  "students": [
+    {
+      "id": "0597",
+      "firstName": "Divya",
+      "lastName": "YEKULA",
+      "age": 23,
+      "bloodGroup": "O+",
+      "email": "yekuladivya8@gmail.com",
+      "phoneNumber": "9392319079"
+    },
+    {
+      "id": "a152",
+      "firstName": "Divya",
+      "lastName": "Yekula",
+      "age": 20,
+      "bloodGroup": "O+",
+      "email": "bhukyamamatha9392@gmail.com",
+      "phoneNumber": "7601037887"
+    }
+  ]
+}
