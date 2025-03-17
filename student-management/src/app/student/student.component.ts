@@ -83,7 +83,7 @@ export class StudentComponent implements OnInit {
 
   private getEmptyStudent(): Student {
     return {
-      id: undefined,  // ✅ Fix: Use `undefined`
+      id: undefined, 
       firstName: '',
       lastName: '',
       age: null,
